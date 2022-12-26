@@ -6,7 +6,7 @@ function isAnagaram(inputString, checkString) {   // function with two inputs
   if (inputString.length != checkString.length) { // checking for length of two strings equal or not
     return false;                                 // if length of inputstring and checkString is not eqaul it can not be a Anagram
   }
-  let counter = {};  //empty object
+  let counter = {};                              //empty object
   for (let letter of inputString) {               // getting each letter of word
     counter[letter] = (counter[letter] || 0) + 1; // setting map of letters 
   }
@@ -16,7 +16,7 @@ function isAnagaram(inputString, checkString) {   // function with two inputs
       return false;                               // end of execution
     } else counter[item] -= 1;                    // if the item(letter) is present decreasing the frequency of it by one
   }     
-  return                           // once all items are checked and if there is no more items its a Anagram
+  return true;                          // once all items are checked and if there is no more items its a Anagram
 }
  
 
