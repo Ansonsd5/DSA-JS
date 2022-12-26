@@ -13,11 +13,12 @@ function isAnagaram(inputString, checkString) {   // function with two inputs
 
   for (let item of checkString) {                 //getting the letters of checkstrings
     if (!counter[item]) {                         // if the item(letter) not present then it cant become anagram
-      return fasle;                               // end of execution
+      return false;                               // end of execution
     } else counter[item] -= 1;                    // if the item(letter) is present decreasing the frequency of it by one
-  }
-  return true;                                    // once all items are checked and if there is no more items its a Anagram
+  }     
+  return                           // once all items are checked and if there is no more items its a Anagram
 }
+ 
 
 const check = isAnagaram("ajay", "jaay");         // function call with two input and store its value in check
 
